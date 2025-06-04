@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  transition: background 0.3s;
+}
+
+.calculadora {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 300px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.pantalla {
+  background: #eee;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: right;
+  min-height: 30px;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button.operador { background-color: #2ecc71; }
+button.igual { background-color: #9b59b6; }
+button.control { background-color: #e67e22; }
+button.limpiarHistorial { background-color: #e74c3c; width: 100%; margin-top: 10px; }
+button.modo { background-color: #34495e; width: 100%; margin-top: 10px; }
+
+button:hover { opacity: 0.9; }
+
+.historial {
+  background: #f9f9f9;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 6px;
+}
+
+/* MODO OSCURO */
+body.oscuro {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+body.oscuro .calculadora {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.oscuro .pantalla {
+  background: #333;
+}
+
+body.oscuro .historial {
+  background: #222;
+}
